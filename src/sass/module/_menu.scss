@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.menu {
+
+}
+
+.menu__title {
+    text-align: center;
+
+}
+
+.menu__box {
+    margin-top: rem(46);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    gap: rem(20);       
+    @include mq(md) {
+        margin-top: rem(47);
+        grid-template-columns: repeat(3, 1fr);
+        gap: rem(30);    
+    }
+}
+
+.menu-item {
+}
+
+.menu-item__box {
+    
+
+}
+
+.about__img {
+    display: block;
+    // width: 315px; // SPサイズ（初期）
+    @include mq("md") {
+      width: 1156px; // PCサイズ
+    }
+}
+
+.menu-item__img img {
+    width: 100%;              // 親要素に合わせて幅を100%に拡張
+    height: auto;             // 必要に応じて高さを調整
+    aspect-ratio: 315 / 250;     // アスペクト比を指定（例：16:9）
+    object-fit: cover;   
+    @include mq(md) {
+        aspect-ratio: 300 / 250;
+        }     // 親要素に合わせてフィットし、アスペクト比を保持
+}
+
+.menu-item__text {
+    text-align: center;
+}
+
+.menu-item__title {
+    margin-top: rem(20);
+    line-height: rem(25);
+    letter-spacing: rem(1);
+    @include mq(md) {
+        margin-top: rem(30);
+        }
+}
+
+.menu-item__price {
+    font-size: rem(15);
+    margin-top: rem(9);
+    line-height: rem(25);
+
+}
+
+.js-fadeIn {
+    opacity: 0;
+}
+
+.js-fadeIn.is-active {
+animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+    transform: translateY(100px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}

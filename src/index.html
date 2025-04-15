@@ -6,7 +6,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
-  <title>CodeUps</title>
+  <title>Gliss</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -18,23 +18,144 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Zen+Old+Mincho&display=swap" rel="stylesheet">  
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
+  <header class="header">
+    <div class="header__inner inner">
+      <h1 class="header__logo">
+        <a href="" class="header__logoLink">
+          Gliss
+        </a>
+      </h1>
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- spナビゲーションここから -->
+      <nav class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="#menu">MENU</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="#about">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- PCナビゲーションここまで -->
+      <!-- spナビゲーションここから -->
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <ul class="sp-nav__items">
+          <li class="sp-nav__item">
+            <a href="#menu">MENU</a>
+          </li>
+          <li class="sp-nav__item">
+            <a href="#about">ABOUT</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- spナビゲーションここまでまで -->
+    </div>
   </header>
   <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
-    </div>
+    <!--mainvisualここから-->
+    <section class="mainvisual">
+      <h2 class="mainvisual__title">
+        <span class="mainvisual__title-1">美</span>の
+        <span class="mainvisual__title-1">頂点</span>を目指す
+        <br class="br-pc">
+        <span class="mainvisual__title-2">贅沢なヘアメイク体験</span>
+      </h2>
+    </section>
+    <!--mainvisualここから-->
+    <!--menuここから-->
+    <section class="menu menu-margin" id="menu">
+      <div class="menu__inner inner">
+        <div class="menu__title">
+          <h2 class="common_title">MENU</h2>
+        </div>
+        <div class="menu__box menu-item">
+          <div class="menu-item__box js-fadeIn">
+            <div class="menu-item__img">
+              <picture>
+                <source media="(max-width: 767px)" srcset="./assets/images/common/menw-01sp.jpg" />
+                <source media="(min-width: 768px)" srcset="./assets/images/common/menw-01.jpg">
+                <img src="./assets/images/common/menw-01sp.jpg" alt="ショート・ミディアム" />
+              </picture>
+            </div>
+            <div class="menu-item__text">
+              <h3 class="menu-item__title">ショート・ミディアム</h3>  
+              <p class="menu-item__price">鎖骨までの長さの方<br>¥11,000-</p>
+            </div>
+          </div>
+          <div class="menu-item__box js-fadeIn">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/images/common/menw-02sp.jpg" />
+              <source media="(min-width: 768px)" srcset="./assets/images/common/menw-02.jpg">
+              <img src="./assets/images/common/menw-02sp.jpg" alt="ロング" />
+            </picture>
+            <div class="menu-item__text">
+              <h3 class="menu-item__title">ロング</h3>  
+              <p class="menu-item__price">鎖骨以上の長さの方<br>¥16,500-</p>
+            </div>
+          </div>
+          <div class="menu-item__box js-fadeIn">
+            <picture>
+              <source media="(max-width: 767px)" srcset="./assets/images/common/menw-03sp.jpg" />
+              <source media="(min-width: 768px)" srcset="./assets/images/common/menw-03.jpg">
+              <img src="./assets/images/common/menw-03sp.jpg" alt="メイク" />
+            </picture>
+            <div class="menu-item__text">
+              <h3 class="menu-item__title">メイク</h3>  
+              <p class="menu-item__price">ヘアに合わせたフルメイクアップ<br>¥11,000-</p>
+            </div>
+          </div>       
+        </div>
+      </div>
+    </section>
+    <!--menuここまで-->
+    <!--aboutここから-->
+    <section class="about about-margin" id="about">
+      <div class="about__inner inner">
+        <div class="about__title">
+          <h2 class="common_title">ABOUT</h2>
+        </div>
+        <div class="about__container  js-fadeIn">
+          <picture class="about__img">
+            <source media="(max-width: 767px)" srcset="./assets/images/common/aboutimg_sp.jpg">
+            <source media="(min-width: 768px)" srcset="./assets/images/common/aboutimg_pc.jpg">
+            <img src="./assets/images/common/aboutimg_sp.jpg" alt="セレブ御用達のヘアメイク専門 ビューティサロンが銀座・新宿に初出店">
+          </picture>
+          <div class="about__text">
+            <h3 class="about__text-title">セレブ御用達のヘアメイク専門<br class="br-sp">
+              ビューティサロンが銀座・新宿に初出店</h3>
+              <p class="about__text-text">
+                世界中のセレブ御用達のヘアセットとフルメイクが専門のビューティサロンです。今まで出会ったことのない“特別なあなた“を体験してみませんか。
+              </p>
+              <div class="about__btn">
+                <a href="" class="common__btn">
+                  ご予約はこちら
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--aboutここまで-->
   </main>
-  <footer>
-
+  <footer class="footer">
+    <p class="footer__copyrigth">©︎Copyright0000 Gliss</p>
   </footer>
 </body>
 

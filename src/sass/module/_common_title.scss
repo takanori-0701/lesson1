@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.common_title {
+    font-size: rem(30);
+    font-family: $second-font-family;
+    display: inline-block;
+    color: $gold;
+    position: relative;
+    padding: 0 rem(30);
+    font-weight: $regular;
+    line-height: 1.2; // または line-height: 36px;
+}
+
+.common_title::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: $gold;
+}
+
+.common_title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+    background-color: $gold;
+}
+.common_title::before,
+.common_title::after {
+content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: rem(15);
+    height: 1px;
+    background-color: $gold;
+}

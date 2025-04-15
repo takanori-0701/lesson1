@@ -1,0 +1,116 @@
+@use "global" as *;
+
+.about {
+    background-color: rgba(167, 132, 90, 0.2);
+    padding: rem(50) 0 rem(60);
+    @include mq(md) {
+        padding: rem(23) 0 rem(47) 0;
+        }
+}
+
+.about-margin {
+
+}
+
+.about__inner {
+
+}
+
+.inner {
+
+}
+
+.about__title {
+    text-align: center;
+}
+
+.common_title {
+
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(42);
+    @include mq(md) {
+        margin-top: rem(50);
+        flex-direction: row-reverse;
+        gap: rem(39);
+        }
+
+}
+
+.about__img img {
+    width: 100%;              // 親要素に合わせて幅を100%に拡張
+    height: auto;             // 必要に応じて高さを調整
+    aspect-ratio:  315/ 250;     // アスペクト比を指定（例：16:9）
+    object-fit: cover;   
+    @include mq(md) {
+        aspect-ratio: 450 / 300;
+        }     // 親要素に合わせてフィットし、アスペクト比を保持
+}
+
+
+.about__text {
+    margin-top: rem(28);
+    color: #505050;
+    @include mq(md) {
+        margin-top: rem(0);
+        line-height: rem(33);
+        }
+}
+
+.about__text-title {
+    font-size: rem(22);
+    font-weight: $sembold;
+    line-height: rem(35);
+    @include mq(md) {
+        margin-top: rem(20);
+        }
+}
+
+.about__text-text {
+    font-size: rem(18);
+    margin-top: rem(10);
+    line-height:rem(33);
+    @include mq(md) {
+        margin-top: rem(17);
+        }    
+
+}
+
+.about__btn {
+    margin-top: rem(25);
+    text-align: center;
+    transition: all 0.3s ease-in-out 0s;
+    @include mq(md) {
+        text-align: left;
+        margin-top: rem(20);
+        }
+}
+.about__btn:hover {
+    opacity: 0.3;
+}
+
+.common__btn {
+    display: block;
+    background-color: $gold;
+    width: auto;
+    width: rem(315);
+    color: #fff;
+    display: inline-block;
+    font-size: rem(20);
+    padding: rem(13) rem(57);
+    font-weight: 700;
+    line-height: 1;
+    padding: rem(18) 0;
+    text-align: center;
+    font-family: $second-font-family;
+    @include mq(md) {
+        width: rem(250);
+        }
+}
+.about__btn:hover {
+
+}
+
