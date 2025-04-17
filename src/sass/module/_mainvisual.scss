@@ -4,14 +4,14 @@
     position: relative;
     width: 100%;
     height: rem(550); // 例：全画面の高さ
-    background-image: url(/assets/images/common/SP_FV.jpg) ;
+    background-image: url(../images/common/SP_FV.webp) ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; // ★これがノーリピートの指定！
     @include mq(md) {
         height: rem(500); // 例：全画面の高さ
         // height: 100vh;
-        background-image: url(/assets/images/common/PC_FV.jpg);
+        background-image: url(../images/common/PC_FV.webp);
         background-position: top;
         }
         @media (min-width: 1500px) {
